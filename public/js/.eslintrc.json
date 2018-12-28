@@ -5,5 +5,14 @@
       "jsx-a11y/image-has-alt": 0,
       "prefer-template": 0,
       "react/no-did-mount-set-state": 0
-  }
+  },
+  "env": {
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+    }
+}
 }
