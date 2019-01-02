@@ -1,8 +1,17 @@
 class ProductList extends React.Component {
   render() {
+    const product = Seed.products[0];
     return (
       <div className="ui unstackable items">
-        Hello World! I'm just a no-good component!
+        <Product
+          id={product.id}
+          title={product.title}
+          description={product.description}
+          url={product.url}
+          vote={product.votes}
+          submitterAvatarUrl={product.submitterAvatarUrl}
+          productImageUrl={product.productImageUrl}
+        />
       </div>
     );
   }
@@ -13,9 +22,15 @@ class Product extends React.Component {
     return (
       <div className="item">
         <div className="image">
-          <img src="/images/products/image-aqua.png" />
+          <img src={this.props.productImageUrl} />
         </div>
         <div className="middle aligned content">
+          <div className="header">
+            <a>
+              <i className="large caret up icon" />
+              {this.props.votes}
+            </a>
+          </div>
           <div className="description">
             <a>Fort Night</a>
             <p>Authentic renaissance actors, delivered in just two weeks.</p>
