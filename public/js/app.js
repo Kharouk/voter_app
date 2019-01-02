@@ -13,7 +13,7 @@ class Product extends React.Component {
     return (
       <div className="item">
         <div className="image">
-          <img src="/images/products/image-aqua.png"></img>
+          <img src="/images/products/image-aqua.png" />
         </div>
         <div className="middle aligned content">
           <div className="description">
@@ -21,7 +21,9 @@ class Product extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
+  }
+}
 
 // ReactDOM.render([WHAT], [WHERE])
 ReactDOM.render(<ProductList />, document.getElementById("content"));
